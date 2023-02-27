@@ -1,0 +1,145 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+  --ff-t:'Roboto', sans-serif;
+
+  --bg-color:#FFFFFF;
+  --bgbton-color: #02799D;
+  --bgbtoff-color: #E1E1E6;
+  --bt-color: #323238;
+
+}
+
+body{
+  background-color: var(--bg-color);
+  color: var(--bt-color);
+  font-family: var(--ff-t);
+  font-weight: 500;
+  min-height: 100vh;
+  display: grid;
+  
+}
+
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17.2rem;
+  height: 100%;
+  width: 100%;
+}
+
+
+button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+#Controls button svg{
+  
+  width: clamp(3.2rem, 1rem + 12vw, 4.6rem);
+}
+
+.hide{
+  display: none;
+}
+
+
+.buttonSoundForest:hover path:nth-of-type(1),
+.buttonSoundRain:hover path:nth-of-type(1),
+.buttonSoundCoffeShop:hover path:nth-of-type(1),
+.buttonSoundFirePlace:hover path:nth-of-type(1){
+
+  fill: var(--bgbton-color);
+  transition: fill 1s ease;
+
+
+}
+
+
+.buttonSoundForest.active path:nth-of-type(1),
+.buttonSoundRain.active path:nth-of-type(1),
+.buttonSoundCoffeShop.active path:nth-of-type(1),
+.buttonSoundFirePlace.active path:nth-of-type(1){
+
+  fill: var(--bgbton-color);
+
+
+}
+
+.buttonSoundForest:hover path:nth-of-type(2),
+.buttonSoundRain:hover path:nth-of-type(2),
+.buttonSoundCoffeShop:hover path:nth-of-type(2),
+.buttonSoundFirePlace:hover path:nth-of-type(2){
+  fill: var(--bg-color);
+}
+
+.buttonSoundForest.active path:nth-of-type(2),
+.buttonSoundRain.active path:nth-of-type(2),
+.buttonSoundCoffeShop.active path:nth-of-type(2),
+.buttonSoundFirePlace.active path:nth-of-type(2){
+  fill: var(--bg-color);
+
+}
+
+
+
+#Timer{
+  font-size: 12.616rem;
+  display: flex;
+}
+
+#Controls{
+  
+  display: flex;
+  justify-content: center;
+  gap: 4rem;  
+}
+
+#soundsPainel{
+ display: grid;
+ grid-template-areas: "A B"
+ "C D";
+ gap: 3.2rem;
+ align-self: center; 
+
+}
+
+@media (min-width:320px) and (max-width:670px){
+  
+body{
+  display: grid;
+  align-content: center;
+}
+
+
+main{
+  display: block;
+  width: 100%;
+  
+}
+
+
+#Timer{
+  display: flex;
+  justify-content: center;
+}
+
+#container{
+  margin-top: 7rem;
+  
+}
+
+ #soundsPainel{
+  margin-top: 5rem;
+  gap: 16px;
+  justify-content: center;
+  
+
+ }
+}
